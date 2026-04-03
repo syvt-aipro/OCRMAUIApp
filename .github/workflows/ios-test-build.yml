@@ -29,6 +29,9 @@ jobs:
     - name: Khôi phục NuGet Packages
       run: dotnet restore
 
+    - name: Ép hệ thống sử dụng Xcode 26.2
+      run: sudo xcode-select -s /Applications/Xcode_26.2.app
+
     - name: Build thử cho iOS (Bỏ qua ký tên)
       run: |
         dotnet build -f net10.0-ios -c Release \
