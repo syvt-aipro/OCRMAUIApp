@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="onnxruntime">
+    <CLASSES>
+      <root url="file:///tmp/JetBrains/xamarinAarPackages/onnxruntime/classes.jar" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

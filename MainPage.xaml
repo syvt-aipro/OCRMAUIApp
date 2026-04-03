@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:OCRMauiApp"  x:Class="OCRMauiApp.MainPage">
+
+    <Grid RowDefinitions="*, Auto, Auto, *" Padding="20">
+        
+        <local:ZoomContainer Grid.Row="0" IsClippedToBounds="True">
+            <Image x:Name="ResultImage" Aspect="AspectFit" BackgroundColor="#E9ECEF" />
+        </local:ZoomContainer>
+
+        <Grid Grid.Row="1" ColumnDefinitions="*,*" Margin="0,20,0,10" ColumnSpacing="10">
+            <Button x:Name="BtnCapture" Grid.Column="0" Text="Chụp ảnh" Clicked="OnCaptureClicked" />
+            <Button x:Name="BtnGallery" Grid.Column="1" Text="Thư viện" Clicked="OnGalleryClicked" />
+        </Grid>
+
+        <Button x:Name="BtnRunOcr" Grid.Row="2" Text="Chạy OCR" Clicked="OnRunOcrClicked" IsEnabled="False" />
+
+        <ScrollView Grid.Row="3" Margin="0,20,0,0">
+            <Label x:Name="TvResult" Text="Kết quả..." />
+        </ScrollView>
+    </Grid>
+</ContentPage>

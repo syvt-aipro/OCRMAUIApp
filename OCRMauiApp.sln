@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCRMauiApp", "OCRMauiApp.csproj", "{2432358D-2618-4D13-8E9E-9CC2298CED31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2432358D-2618-4D13-8E9E-9CC2298CED31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2432358D-2618-4D13-8E9E-9CC2298CED31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2432358D-2618-4D13-8E9E-9CC2298CED31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2432358D-2618-4D13-8E9E-9CC2298CED31}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
