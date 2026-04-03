@@ -23,8 +23,8 @@ jobs:
         # Cho phép sử dụng các bản Preview/RC nếu cần thiết
         dotnet-quality: 'preview' 
 
-    - name: Cài đặt MAUI iOS Workload
-      run: dotnet workload install maui-ios
+    - name: Cài đặt tự động các MAUI Workload cần thiết
+      run: dotnet workload restore
 
     - name: Khôi phục NuGet Packages
       run: dotnet restore
