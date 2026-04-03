@@ -84,7 +84,7 @@
     </ItemGroup>
 
     <ItemGroup Condition="$(TargetFramework.Contains('-ios'))">
-        <PackageReference Include="Xamarin.MLKit.iOS.BarcodeScanning" Version="3.2.0.1" /> 
+        <PackageReference Include="Xamarin.MLKit.iOS.BarcodeScanning.JimmyPun610" Version="2.2.0.1" /> 
     </ItemGroup>
 
     <ItemGroup>
