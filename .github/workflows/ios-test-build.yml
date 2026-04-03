@@ -1,0 +1,36 @@
+name: Kiểm tra Build iOS
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build-ios:
+    # Sử dụng macOS mới nhất để đảm bảo tương thích với SDK 10
+    runs-on: macos-latest 
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Thiết lập .NET SDK 10.0.104
+      uses: actions/setup-dotnet@v4
+      with:
+        # Chỉ định chính xác phiên bản bạn đang dùng
+        dotnet-version: '10.0.104'
+        # Cho phép sử dụng các bản Preview/RC nếu cần thiết
+        dotnet-quality: 'preview' 
+
+    - name: Cài đặt MAUI iOS Workload
+      run: dotnet workload install maui-ios
+
+    - name: Khôi phục NuGet Packages
+      run: dotnet restore
+
+    - name: Build thử cho iOS (Bỏ qua ký tên)
+      run: |
+        dotnet build -f net8.0-ios -c Release \
+        /p:EnableCodeSigning=false \
+        /p:BuildIpa=false
